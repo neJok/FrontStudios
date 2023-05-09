@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body{
+            width: 100%;
+            min-height: 100%;
+            overflow-x: hidden;
+        }
+        body{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+        body::-webkit-scrollbar{
+            width: 0;
+        }
+        .main__letter{
+            width: 350px;
+            height: 600px;
+            background-color: #151515;
+        }
+        .logo__place{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+        }
+        .logo{
+            height: 60px;
+            width: 60px;
+            scale: 1.5;
+        }
+        .information__title{
+            width: 100%;
+            height: 15px;
+            font-family:  'SuperWebcomic';
+            color: #fff;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .main__info{
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+            height: 95%;
+            margin-top: 20px;
+        }
+
+        .main__info p{
+            color: white;
+            font-family:  'SuperWebcomic';
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="main__letter">
+    <div class="logo__place">
+        <img src="https://i3.imageban.ru/out/2023/05/08/4b77cdbd2d3afbbfbaed38b84c3648ae.png" alt="" class="logo">
+    </div>
+    <div class="information__title">НОВЫЙ ЗАКАЗ</div>
+    <div class="main__info">
+        <p>{{.Name}}</p>
+        <p>{{.Email}}</p>
+        <p>{{.Description}}</p>
+        <p>{{.Type}}</p>
+        <p>{{.Link}}</p>
+        <p>{{.Budget}}</p>
+        <p>{{.Deadlines}}</p>
+    </div>
+</div>
+</body>
+</html>

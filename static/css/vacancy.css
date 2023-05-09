@@ -1,0 +1,424 @@
+html,body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+body{
+   background-color: #202020;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   position: relative;
+}
+html,body::-webkit-scrollbar{
+    width: 0;
+}
+.top__contentbg{
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    background-color: #151515;
+}
+.header{
+ width: 100%;
+ height: 80px;
+ display: flex;
+ justify-content: space-between;
+ z-index: 2;
+}
+.header__right{
+    width: 300px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.header__left{
+    width: 450px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.logotype{
+    width: 80px;
+    height: 80px;
+}
+@font-face{
+    src: url('../font/Manrope-VariableFont_wght.ttf');
+    font-family: 'SuperWebcomic';
+    font-weight: normal;
+    font-style: normal;
+    text-transform: lowercase;
+}
+.link{
+ font-family: 'SuperWebcomic';
+ color: #fff;
+ font-weight: 650;
+ font-size: 17px;
+ letter-spacing: 1px;
+ transition: 0.3s;
+}
+.link:hover{
+color: #999;
+}
+.header__list{
+    display: flex;
+    margin-right: 50px;
+}
+.header__list a{
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.studio{
+ color: #bd7aff;
+}
+.vacancies__wrapper{
+    width: 1280px;
+    height: 1660px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.vacancies{
+    background-color: #151515;
+    height: 400px;
+    width: 900px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.long{
+    height: 420px;
+}
+.vac__title{
+    font-family: 'SuperWebcomic';
+    color: #fff;
+    font-weight: 650;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.vac__subtitle{
+    font-family: 'SuperWebcomic';
+    color: #fff;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.vac__info{
+    font-family: 'SuperWebcomic';
+    color: #fff;
+    font-weight: 550;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.vac__price{
+    font-family: 'SuperWebcomic';
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.vac__reponse{
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'SuperWebcomic';
+    color: #fff;
+    background-color: #bd7aff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-weight: 650;
+    transition: 0.3s;
+}
+.vac__reponse:hover{
+    opacity: 0.7;
+}
+@media(max-width: 928px){
+.vacancies{
+    width: 762px;
+}
+.vac__reponse{
+    margin-top: 10px;
+}
+}
+@media(max-width: 765px){
+    .vacancies__wrapper{
+        height: 1660px;
+    }
+    .vacancies{
+        width: 350px;
+        height: 550px;
+    }
+    .vac__info,.vac__price{
+        font-size: 15px;
+    }
+    .frontend{
+        height: 440px;
+    }
+    .backend{
+        height: 420px;
+    }
+    .manager{
+        height: 430px;
+    }
+    .reactnative{
+        height: 460px;
+    }
+    }
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color: #151515;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.footerbg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    z-index: -1;
+    margin-top: 1910px;
+}
+.footer__logo{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+.org__name{
+    color: #fff;
+    font-family: 'SuperWebcomic';
+    letter-spacing: 1px;
+    align-self: center;
+    position: absolute;
+    margin-top: 60px;
+}
+.footer__wrapper{
+    width: 280px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.terms{
+ color: gray;
+ font-family: 'SuperWebcomic';
+ letter-spacing: 1px;
+ position: absolute;
+ margin-top: 80px;
+ font-size: 12px;
+ transition: 0.3s;
+}
+.copy{
+    margin-top: 100px;
+}
+.terms:hover{
+    opacity: 0.8;
+}
+@media(max-width: 723px){
+    .link{
+        display: none;
+    }
+    .burger__wrapper{
+        display: flex;
+        flex-flow: column;
+        height: 40px;
+        width: 45px;
+        transition: .3s;
+        position: relative;
+        cursor: pointer;
+    }
+    .header__list{
+        justify-content: flex-end;
+        width: 100%;
+        margin-right: 20px;
+    }
+    .burger__wrapper::after,
+    .burger__wrapper::before{
+        content: '';
+        height: 4px;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+    }
+    .burger__wrapper::before{
+        top: 0;
+        
+    }
+    .burger__wrapper > span{
+        height: 4px;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 19px;
+    }
+    .burger__wrapper::after{
+        bottom: 0;
+    }
+    .image__place{
+        display: none;
+    }
+    .description__place{
+        width: 100%;
+        justify-content: center;
+    }
+    .description{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .line{
+        display: none;
+    }
+    .plug__two{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        height: 1020px;
+        align-items: center;
+    }
+    .plug__two > .website{
+        margin-top: 5px;
+    }
+    .our__achievements-wrapper{
+        display: flex;
+        height: 1020px;
+        flex-flow: column;
+    }
+    .our__facts-wrapper{
+        display: flex;
+        height: 355px;
+    }
+    .our__facts{
+        height: 355px;
+        width: 347px;
+        margin-left: 7px;
+    }
+    .portfolio__work{
+        width: 347px;
+        height: 150px;
+    }
+    .our__portfolio{
+        height: 650px;
+    }
+    }
+    @media(max-width: 367px){
+    .our__achievements{
+        width: 260px;
+    }
+    .description{
+        width: 260px;
+    }
+    .banner__title{
+        font-size: 20px;
+    }
+    .our__facts{
+        width: 260px;
+        height: 450px;
+    }
+    .our__facts-wrapper{
+        height: 450px;
+    }
+    .portfolio__work{
+        width: 260px;
+    }
+    .portfolio__type{
+        font-size: 15px;
+    }
+    .price{
+        font-size: 13px;
+    }
+    }
+    .burger{
+            width: 200px;
+            height: 100vh;
+            background-color: #0E1418;
+            flex-flow: column;
+            display: none;
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            right: 0;
+            transition: 0.3s;   
+    }
+    .burger__close{
+        flex-flow: column;
+        height: 40px;
+        width: 45px;
+        position: relative;
+        cursor: pointer;
+        z-index: 20;
+        display: none;
+        margin-right: 10px;
+    }
+    .burger__close::after,
+    .burger__close::before{
+        content: '';
+        height: 4px;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+    }
+    .burger__close::before{
+        top: 0;
+        
+    }
+    .burger__close > span{
+        height: 4px;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 19px;
+    }
+    .burger__close::after{
+        bottom: 0;
+    }
+    .burger__controll{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .burger__content{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-flow: column;
+    }
+    .link__block{
+        width: 100%;
+        height: 40px;
+        transition: .3s;
+        color: #fff;
+        font-family: 'SuperWebcomic';
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: 650;
+        letter-spacing: 1px;
+    }
+    .link__block:hover{
+        background-color: #313233;
+    }
+    .link__block:focus{
+        background-color: #313233;
+    }
+    .onpage{
+        color: #bd7afe;
+    }
+    

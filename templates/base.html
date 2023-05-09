@@ -1,0 +1,55 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="img/favicon.jpg">
+    {{template "css" .}}
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontStudios</title>
+</head>
+<body>
+<div class="burger" style="transform: translateX(0%);">
+    <div class="burger__controll">
+        <div class="burger__close" onclick="closeBurger();">
+            <span></span>
+        </div>
+    </div>
+    {{template "burger" .}}
+</div>
+<div class="top__contentbg"></div>
+<header class="header">
+    <!--burger menu-->
+    <div class="header__right">
+        <img src="/static/img/logotype.png" alt="logotype" class="logotype">
+    </div>
+    <div class="header__left">
+        <div class="header__list">
+            <div class="burger__wrapper" onclick="openBurger();">
+                <span></span>
+            </div>
+            {{template "header" .}}
+        </div>
+    </div>
+</header>
+
+
+{{template "content" .}}
+
+<footer class="footer">
+    <div class="footer__wrapper">
+        <img src="/static/img/logotype.png" alt="" class="footer__logo">
+        <p class="org__name">© 2022-2023 "FrontStudios"</p>
+        <a href="/static/lic/terms%20of%20use.txt" class="terms">Пользовательское соглашение</a>
+        <a href="/static/lic/copyright.txt" class="terms copy">Copyright</a>
+    </div>
+</footer>
+<div class="footerbg"></div>
+<script src="/static/js/main.js"></script>
+</body>
+</html>
+
+</body>
+</html>
+{{end}}

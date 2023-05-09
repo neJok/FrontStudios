@@ -1,0 +1,37 @@
+{{ define "css" }}
+<link rel="stylesheet" href="/static/css/contacts.css">
+{{end}}
+
+{{ define "burger" }}
+<div class="burger__content">
+    <a href="/" class="link__block">Студия</a>
+    <a href="/order" class="link__block">Заказать</a>
+    <a href="/vacancy" class="link__block">Вакансии</a>
+    <a href="/contacts" class="link__block onpage">Контакты</a>
+</div>
+{{ end }}
+
+{{ define "header" }}
+<a href="/" class="link">Студия</a>
+<a href="/order" class="link">Заказать</a>
+<a href="/vacancy" class="link">Вакансии</a>
+<a href="/contacts" class="link studio">Контакты</a>
+{{ end }}
+
+{{define "content"}}
+<div class="contacts__wrapper">
+  <div class="contacts">
+    <div class="line">
+       <div class="contact__block left">
+        <p class="contact__title">Studio name</p>
+        <div class="contact"><p class="contact__name">"FrontStudios"</p></div>
+       </div>
+       <div class="contact__block"><p class="contact__title">Email</p><div class="contact"><p class="contact__name email ">FrontStudiosPR@gmail.com</p></div></div>
+    </div>
+    <div class="line">
+      <div class="contact__block left"><p class="contact__title">VK</p><div class="contact"><p class="contact__name">@lonfich</p></div><div class="contact"><p class="contact__name">@FrontStudios</p></div></div>
+      <div class="contact__block"><p class="contact__title">Telegram</p><div class="contact"><p class="contact__name">@lonfich</p></div></div>
+    </div>
+  </div>
+</div>
+{{end}}

@@ -1,0 +1,43 @@
+{{ define "css" }}
+<link rel="stylesheet" href="/static/css/order.css">
+{{end}}
+
+{{ define "burger" }}
+<div class="burger__content">
+    <a href="/" class="link__block">Студия</a>
+    <a href="/order" class="link__block onpage">Заказать</a>
+    <a href="/vacancy" class="link__block">Вакансии</a>
+    <a href="/contacts" class="link__block">Контакты</a>
+</div>
+{{ end }}
+
+{{ define "header" }}
+<a href="/" class="link">Студия</a>
+<a href="/order" class="link studio">Заказать</a>
+<a href="/vacancy" class="link">Вакансии</a>
+<a href="/contacts" class="link">Контакты</a>
+{{ end }}
+
+{{define "content"}}
+
+ <div class="order__form-wrapper">
+   <div class="order__form">
+    <p class="order__title">Форма для заказа</p>
+
+    <form class="form" method="POST">
+      <input type="text" name="name" class="input__name" placeholder="Введите ваше имя и фамилию">
+      <input type="text" name="email" class="input__email" placeholder="Введите email">
+      <input type="text" name="work_type" class="input__order-type" placeholder="Введите тип работы">
+      <textarea name="work_description" class="input__description" placeholder="Краткое описание работы"></textarea>
+      <input name="budget" type="number" oninput="if (this.value.length > 6) {this.value = this.value.slice(0,6);}" class="input__price" placeholder="Бюджет работы"><p class="ruble">₽</p>
+      <input name="deadlines" type="number" oninput="if (this.value.length > 2) {this.value = this.value.slice(0,2);}"  class="input__deadline" placeholder="Срок работы (в днях)">
+      <input name="task_link" type="text" class="input__email" placeholder="Ссылка на ТЗ и макет">
+      <div class="plug" style="width: 100%;height: 15px;"></div>
+      <p>{{ . }}</p>
+      <button type="submit" class="order__btn">Заказать</button>
+    </form>
+   </div>
+ </div>
+
+
+{{end}}
